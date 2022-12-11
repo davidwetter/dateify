@@ -21,22 +21,23 @@ struct Home: View {
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
-                VStack{
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text("Willkommen zurück")
-                            .font(.callout)
-                        Text("Hier ist das heutige Update.")
-                            .font(.title2.bold())
-                    }
-                    .frame(maxWidth: .infinity,alignment: .leading)
-                    .padding(.vertical)
-                    
-                    CustomSegmentedBar()
-                        .padding(.top,5)
-                    
-                    // MARK: Task View
-                    TaskView()
+            VStack{
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Willkommen zurück")
+                        .font(.callout)
+                    Text("Hier ist das heutige Update.")
+                        .font(.title2.bold())
                 }
+                .frame(maxWidth: .infinity,alignment: .leading)
+                .padding(.vertical)
+                
+                CustomSegmentedBar()
+                    .padding(.top,5)
+                
+                // MARK: Task View
+                TaskView()
+            }
+        }
                 .padding()
                 .overlay(alignment: .bottom) {
                     // MARK: Add Button
@@ -75,9 +76,9 @@ struct Home: View {
                         .environmentObject(taskModel)
                 }
                 .sheet(isPresented: $isOnboarding) {
-                    StartButtonView()
+                    OnboardingView()
                 }
-            }
+            
         }
         // MARK: TaskView
         @ViewBuilder

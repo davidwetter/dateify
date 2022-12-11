@@ -59,7 +59,8 @@ struct SettingsView: View {
                 Text("Neugestartet".uppercased())
                   .fontWeight(.bold)
                   .foregroundColor(Color.green)
-              } else {
+              }
+                else {
                 Text("Neustart".uppercased())
                   .fontWeight(.bold)
                   .foregroundColor(Color.secondary)

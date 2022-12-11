@@ -16,10 +16,17 @@ struct StartButtonView: View {
     // MARK: - BODY
     
     var body: some View {
-        Button("Weiter") {
+        
+        Button() {
             isOnboarding = false
+        } label: {
+            Text("Weiter")
+                .frame(maxWidth: .infinity)
+                .padding(10)
         }
         .buttonStyle(.borderedProminent)
+        .padding(.all, 20.0)
+        
     }
 }
 
