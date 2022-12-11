@@ -34,7 +34,7 @@ struct OnboardingView: View {
                     Text("Tasks")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Lorem ipsum dolor sit amet, consetetur  elitr, sed diam nonumy eirmod tempor invidunt ")
+                    Text("Legen Sie einmalige oder wiederkehrende Fälligkeiten und Erinnerungen fest.")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.secondary)
                     
@@ -42,17 +42,17 @@ struct OnboardingView: View {
                 
             }
             HStack(alignment: .center, spacing: 20){
-                Image("tasks")
+                Image("farben")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 60, height: 60)
                     .cornerRadius(9)
                     .padding(.leading, 30)
                 VStack{
-                    Text("Tasks")
+                    Text("Farben")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Lorem ipsum dolor sit amet, consetetur  elitr, sed diam nonumy eirmod tempor invidunt ")
+                    Text("Erstellen Sie farbig codierte Listen.")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.secondary)
                     
@@ -60,17 +60,17 @@ struct OnboardingView: View {
                 
             }
             HStack(alignment: .center, spacing: 20){
-                Image("tasks")
+                Image("datum")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 60, height: 60)
                     .cornerRadius(9)
                     .padding(.leading, 30)
                 VStack{
-                    Text("Tasks")
+                    Text("Datum und Zeit")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Lorem ipsum dolor sit amet, consetetur  elitr, sed diam nonumy eirmod tempor invidunt ")
+                    Text("Fügen Sie beliebigen Aufgaben Datum und Zeit hinzu.")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.secondary)
                     
