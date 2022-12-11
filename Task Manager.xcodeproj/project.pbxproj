@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		019E051329468E0A00EEE369 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E051229468E0A00EEE369 /* ActivityIndicator.swift */; };
 		01C2D4A12944B28F0017B2C3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2D4A02944B28F0017B2C3 /* SettingsView.swift */; };
 		01C2D4A32944B2D20017B2C3 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2D4A22944B2D20017B2C3 /* SettingsLabelView.swift */; };
 		01C2D4A52944B2FD0017B2C3 /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2D4A42944B2FD0017B2C3 /* SettingsRowView.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		019E051229468E0A00EEE369 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		01C2D4A02944B28F0017B2C3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		01C2D4A22944B2D20017B2C3 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
 		01C2D4A42944B2FD0017B2C3 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				ADFB98B528205462006B013F /* DynamicFilteredView.swift */,
 				ADFB98AF28204353006B013F /* Home.swift */,
+				019E051229468E0A00EEE369 /* ActivityIndicator.swift */,
 				ADFB98B3282045CA006B013F /* AddNewTask.swift */,
 				01C2D4A02944B28F0017B2C3 /* SettingsView.swift */,
 				01C2D4A42944B2FD0017B2C3 /* SettingsRowView.swift */,
@@ -354,6 +357,7 @@
 				ADFB98B22820440A006B013F /* TaskViewModel.swift in Sources */,
 				01C2D4A32944B2D20017B2C3 /* SettingsLabelView.swift in Sources */,
 				ADFB989B282042DF006B013F /* Persistence.swift in Sources */,
+				019E051329468E0A00EEE369 /* ActivityIndicator.swift in Sources */,
 				01C2D4A12944B28F0017B2C3 /* SettingsView.swift in Sources */,
 				ADFB98B628205462006B013F /* DynamicFilteredView.swift in Sources */,
 				ADFB98B028204353006B013F /* Home.swift in Sources */,
