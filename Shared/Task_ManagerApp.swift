@@ -15,9 +15,6 @@ import SwiftUI
          WindowGroup {
              if isOnboarding {
                  ActivityIndicator()
-                     .sheet(isPresented: $isOnboarding) {
-                                          OnboardingView()
-                                      }
              }
              else {
                  ContentView()

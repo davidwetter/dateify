@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ActivityIndicator: View {
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
     var body: some View {
         VStack {
             Image("logo")
@@ -15,9 +16,12 @@ struct ActivityIndicator: View {
                 .scaledToFit()
                 .frame(width: 200, height: 200)
                 .cornerRadius(9)
-        }
+        
         ProgressView()
          .progressViewStyle(CircularProgressViewStyle())
+        }.sheet(isPresented: $isOnboarding) {
+            OnboardingView()
+            }
     }
 }
 
