@@ -23,7 +23,7 @@ struct OnboardingView: View {
                 .padding(.top, 75.0)
             Spacer()
             
-            HStack(alignment: .center, spacing: 20){
+            HStack(alignment: .center, spacing: 10){
                 Image("tasks")
                     .resizable()
                     .scaledToFit()
@@ -39,9 +39,11 @@ struct OnboardingView: View {
                         .foregroundColor(.secondary)
                     
                 }.padding(.trailing, 20)
+                    .padding(.leading, 10)
                 
             }
-            HStack(alignment: .center, spacing: 20){
+            .padding(.bottom, 10)
+            HStack(alignment: .center, spacing: 10){
                 Image("farben")
                     .resizable()
                     .scaledToFit()
@@ -52,14 +54,16 @@ struct OnboardingView: View {
                     Text("Farben")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("Erstellen Sie farbig codierte Listen.")
+                    Text("Erstellen Sie individuell farbig codierte Listen.")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundColor(.secondary)
                     
                 }.padding(.trailing, 20)
+                    .padding(.leading, 10)
                 
             }
-            HStack(alignment: .center, spacing: 20){
+            .padding(.bottom, 10)
+            HStack(alignment: .center, spacing: 10){
                 Image("datum")
                     .resizable()
                     .scaledToFit()
@@ -75,6 +79,7 @@ struct OnboardingView: View {
                         .foregroundColor(.secondary)
                     
                 }.padding(.trailing, 20)
+                    .padding(.leading, 10)
                 
             }
             Spacer()
