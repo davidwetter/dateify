@@ -15,7 +15,7 @@ struct ActivityIndicator: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
-                .cornerRadius(9)
+                .cornerRadius(20)
         
         ProgressView()
          .progressViewStyle(CircularProgressViewStyle())

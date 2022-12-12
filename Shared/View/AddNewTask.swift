@@ -91,7 +91,7 @@ struct AddNewTask: View {
                     taskModel.showDatePicker.toggle()
                 } label: {
                     Image(systemName: "calendar")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
             }
             
@@ -123,15 +123,15 @@ struct AddNewTask: View {
                             .font(.callout)
                             .padding(.vertical,8)
                             .frame(maxWidth: .infinity)
-                            .foregroundColor(taskModel.taskType == type ? .white : .black)
+                            .foregroundColor(taskModel.taskType == type ? Color(UIColor.systemBackground) : .primary)
                             .background{
                                 if taskModel.taskType == type{
                                     Capsule()
-                                        .fill(.black)
+                                        .fill(.primary)
                                         .matchedGeometryEffect(id: "TYPE", in: animation)
                                 }else{
                                     Capsule()
-                                        .strokeBorder(.black)
+                                        .strokeBorder(.primary)
                                 }
                             }
                             .contentShape(Capsule())
@@ -158,10 +158,10 @@ struct AddNewTask: View {
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity)
                     .padding(.vertical,12)
-                    .foregroundColor(.white)
+                    .foregroundColor(.primary)
                     .background{
                         Capsule()
-                            .fill(.black)
+                            .fill(.primary)
                     }
             }
             .frame(maxHeight: .infinity,alignment: .bottom)
@@ -186,7 +186,7 @@ struct AddNewTask: View {
                         .datePickerStyle(.graphical)
                         .labelsHidden()
                         .padding()
-                        .background(.white,in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .background(Color(UIColor.systemBackground),in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                         .padding()
                 }
             }

@@ -51,10 +51,10 @@ struct Home: View {
                         } icon: {
                             Image(systemName: "plus.app.fill")
                         }
-                        .foregroundColor(.white)
+                        .foregroundColor(.primary)
                         .padding(.vertical,12)
                         .padding(.horizontal)
-                        .background(.black,in: Capsule())
+                        .background(Color(UIColor.systemBackground),in: Capsule())
                     }
                     // MARK: Linear Gradient BG
                     .padding(.top,10)
@@ -118,14 +118,14 @@ struct Home: View {
                             taskModel.setupTask()
                         } label: {
                             Image(systemName: "square.and.pencil")
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                         }
                     }
                 }
                 
                 Text(task.title ?? "")
                     .font(.title2.bold())
-                    .foregroundColor(.black)
+                    .foregroundColor(Color(UIColor.systemBackground))
                     .padding(.vertical,10)
                 
                 HStack(alignment: .bottom, spacing: 0) {
@@ -179,13 +179,13 @@ struct Home: View {
                         .font(.callout)
                         .fontWeight(.semibold)
                         .scaleEffect(0.9)
-                        .foregroundColor(taskModel.currentTab == tab ? .white : .black)
+                        .foregroundColor(taskModel.currentTab == tab ? Color(UIColor.systemBackground) : .primary)
                         .padding(.vertical,6)
                         .frame(maxWidth: .infinity)
                         .background{
                             if taskModel.currentTab == tab{
                                 Capsule()
-                                    .fill(.black)
+                                    .fill(.primary)
                                     .matchedGeometryEffect(id: "TAB", in: animation)
                             }
                         }

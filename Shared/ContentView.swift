@@ -21,7 +21,7 @@ struct ContentView: View {
                       isShowingSettings = true
                     }) {
                       Image(systemName: "gear")
-                            .foregroundColor(.black)
+                            .foregroundColor(.primary)
                     } //: BUTTON
                     .sheet(isPresented: $isShowingSettings) {
                       SettingsView()
