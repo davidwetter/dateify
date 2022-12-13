@@ -18,6 +18,15 @@ struct Home: View {
     // MARK: Environment Values
     @Environment(\.self) var env
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    @Environment(\.colorScheme) var colorScheme
+
+    let colorStops: [Gradient.Stop] = [
+        .init(color: Color(UIColor.systemBackground).opacity(0.05), location: 0.2),
+        .init(color: Color(UIColor.systemBackground).opacity(0.4), location: 0.4),
+        .init(color: Color(UIColor.systemBackground).opacity(0.7), location: 0.6),
+        .init(color: Color(UIColor.systemBackground), location: 0.8)
+    ]
+    
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -51,21 +60,16 @@ struct Home: View {
                         } icon: {
                             Image(systemName: "plus.app.fill")
                         }
-                        .foregroundColor(.primary)
+                        .foregroundColor(Color(UIColor.systemBackground))
                         .padding(.vertical,12)
                         .padding(.horizontal)
-                        .background(Color(UIColor.systemBackground),in: Capsule())
+                        .background(colorScheme == .dark ? Color.white : Color.black,in: Capsule())
                     }
                     // MARK: Linear Gradient BG
                     .padding(.top,10)
                     .frame(maxWidth: .infinity)
                     .background{
-                        LinearGradient(colors: [
-                            .white.opacity(0.05),
-                            .white.opacity(0.4),
-                            .white.opacity(0.7),
-                            .white
-                        ], startPoint: .top, endPoint: .bottom)
+                        LinearGradient(stops: colorStops, startPoint: .top, endPoint: .bottom)
                         .ignoresSafeArea()
                     }
                 }
