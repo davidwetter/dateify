@@ -20,18 +20,18 @@ struct Home: View {
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
     @Environment(\.colorScheme) var colorScheme
 
-    let colorStops: [Gradient.Stop] = [
-        .init(color: Color(UIColor.systemBackground).opacity(0.1), location: 0.05),
-        .init(color: Color(UIColor.systemBackground).opacity(0.2), location: 0.1),
-        .init(color: Color(UIColor.systemBackground).opacity(0.3), location: 0.2),
-        .init(color: Color(UIColor.systemBackground).opacity(0.4), location: 0.3),
-        .init(color: Color(UIColor.systemBackground).opacity(0.5), location: 0.4),
-        .init(color: Color(UIColor.systemBackground).opacity(0.6), location: 0.5),
-        .init(color: Color(UIColor.systemBackground).opacity(0.7), location: 0.6),
-        .init(color: Color(UIColor.systemBackground).opacity(0.8), location: 0.7),
-        .init(color: Color(UIColor.systemBackground).opacity(0.9), location: 0.8),
-        .init(color: Color(UIColor.systemBackground), location: 0.9)
-    ]
+//    let colorStops: [Gradient.Stop] = [
+//        .init(color: Color(UIColor.systemBackground).opacity(0.1), location: 0.05),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.2), location: 0.1),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.3), location: 0.2),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.4), location: 0.3),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.5), location: 0.4),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.6), location: 0.5),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.7), location: 0.6),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.8), location: 0.7),
+//        .init(color: Color(UIColor.systemBackground).opacity(0.9), location: 0.8),
+//        .init(color: Color(UIColor.systemBackground), location: 0.9)
+//    ]
     
     
     var body: some View {
