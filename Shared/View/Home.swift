@@ -33,7 +33,6 @@ struct Home: View {
 //        .init(color: Color(UIColor.systemBackground), location: 0.9)
 //    ]
     
-    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack{
