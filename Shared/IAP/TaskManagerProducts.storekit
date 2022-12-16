@@ -1,0 +1,65 @@
+{
+  "identifier" : "5725BD0C",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "6445157238",
+      "localizations" : [
+        {
+          "description" : "Unterstützung vom Entwickler mit CHF 1.--.",
+          "displayName" : "CHF 1 Unterstützung",
+          "locale" : "de"
+        }
+      ],
+      "productID" : "ch.davidwetter.taskios.store.chf1",
+      "referenceName" : "Support CHF 1",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "6445157300",
+      "localizations" : [
+        {
+          "description" : "Unterstützung vom Entwickler mit CHF 3.--.",
+          "displayName" : "CHF 3 Unterstützung",
+          "locale" : "de"
+        }
+      ],
+      "productID" : "ch.davidwetter.taskios.store.chf3",
+      "referenceName" : "Support CHF 3",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "6445157353",
+      "localizations" : [
+        {
+          "description" : "Unterstützung vom Entwickler mit CHF 5.--.",
+          "displayName" : "CHF 5 Unterstützung",
+          "locale" : "de"
+        }
+      ],
+      "productID" : "ch.davidwetter.taskios.store.chf5",
+      "referenceName" : "Support CHF 5",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1659195877",
+    "_developerTeamID" : "BBCTB7XRSC",
+    "_lastSynchronizedDate" : 692900304.38060105
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
