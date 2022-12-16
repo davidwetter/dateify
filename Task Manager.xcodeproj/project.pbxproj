@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		012CF2BB29493BAD00BC8862 /* ActivityIndicatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012CF2BA29493BAD00BC8862 /* ActivityIndicatorHelper.swift */; };
+		015EA080294CAF6100FA8CF5 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015EA07F294CAF6100FA8CF5 /* CalenderView.swift */; };
+		015EA088294CD0B600FA8CF5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015EA087294CD0B600FA8CF5 /* StoreKit.framework */; };
+		015EA08B294CD17200FA8CF5 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015EA08A294CD17200FA8CF5 /* IAPHelper.swift */; };
+		015EA08E294CD27100FA8CF5 /* TaskManagerProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015EA08D294CD27100FA8CF5 /* TaskManagerProducts.swift */; };
 		019E051329468E0A00EEE369 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019E051229468E0A00EEE369 /* ActivityIndicator.swift */; };
 		01C2D4A12944B28F0017B2C3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2D4A02944B28F0017B2C3 /* SettingsView.swift */; };
 		01C2D4A32944B2D20017B2C3 /* SettingsLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C2D4A22944B2D20017B2C3 /* SettingsLabelView.swift */; };
@@ -53,6 +57,11 @@
 
 /* Begin PBXFileReference section */
 		012CF2BA29493BAD00BC8862 /* ActivityIndicatorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorHelper.swift; sourceTree = "<group>"; };
+		015EA07F294CAF6100FA8CF5 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
+		015EA087294CD0B600FA8CF5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.1.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
+		015EA08A294CD17200FA8CF5 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		015EA08C294CD1CB00FA8CF5 /* TaskManagerProducts.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = TaskManagerProducts.storekit; sourceTree = "<group>"; };
+		015EA08D294CD27100FA8CF5 /* TaskManagerProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerProducts.swift; sourceTree = "<group>"; };
 		019E051229468E0A00EEE369 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		01C2D4A02944B28F0017B2C3 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		01C2D4A22944B2D20017B2C3 /* SettingsLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsLabelView.swift; sourceTree = "<group>"; };
@@ -84,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015EA088294CD0B600FA8CF5 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +121,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		015EA081294CCC1000FA8CF5 /* IAP */ = {
+			isa = PBXGroup;
+			children = (
+				015EA08A294CD17200FA8CF5 /* IAPHelper.swift */,
+				015EA08C294CD1CB00FA8CF5 /* TaskManagerProducts.storekit */,
+				015EA08D294CD27100FA8CF5 /* TaskManagerProducts.swift */,
+			);
+			path = IAP;
+			sourceTree = "<group>";
+		};
+		015EA086294CD0B600FA8CF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				015EA087294CD0B600FA8CF5 /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADFB9864282042DE006B013F = {
 			isa = PBXGroup;
 			children = (
@@ -119,12 +147,14 @@
 				ADFB9884282042DF006B013F /* Tests iOS */,
 				ADFB9890282042DF006B013F /* Tests macOS */,
 				ADFB9875282042DF006B013F /* Products */,
+				015EA086294CD0B600FA8CF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		ADFB9869282042DE006B013F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				015EA081294CCC1000FA8CF5 /* IAP */,
 				ADFB98AE2820434D006B013F /* ViewModel */,
 				ADFB98AD2820434A006B013F /* View */,
 				ADFB986C282042DE006B013F /* Task_ManagerApp.swift */,
@@ -186,6 +216,7 @@
 				01C2D4A22944B2D20017B2C3 /* SettingsLabelView.swift */,
 				01C2D4A82944BA580017B2C3 /* OnboardingView.swift */,
 				01C2D4AA2944BC0F0017B2C3 /* StartButtonView.swift */,
+				015EA07F294CAF6100FA8CF5 /* CalenderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,12 +387,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				015EA08E294CD27100FA8CF5 /* TaskManagerProducts.swift in Sources */,
 				ADFB9897282042DF006B013F /* Task_ManagerApp.swift in Sources */,
 				ADFB98B22820440A006B013F /* TaskViewModel.swift in Sources */,
 				01C2D4A32944B2D20017B2C3 /* SettingsLabelView.swift in Sources */,
 				ADFB989B282042DF006B013F /* Persistence.swift in Sources */,
 				019E051329468E0A00EEE369 /* ActivityIndicator.swift in Sources */,
 				01C2D4A12944B28F0017B2C3 /* SettingsView.swift in Sources */,
+				015EA080294CAF6100FA8CF5 /* CalenderView.swift in Sources */,
+				015EA08B294CD17200FA8CF5 /* IAPHelper.swift in Sources */,
 				ADFB98B628205462006B013F /* DynamicFilteredView.swift in Sources */,
 				012CF2BB29493BAD00BC8862 /* ActivityIndicatorHelper.swift in Sources */,
 				ADFB98B028204353006B013F /* Home.swift in Sources */,

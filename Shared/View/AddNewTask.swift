@@ -38,7 +38,7 @@ struct AddNewTask: View {
                             .font(.title3)
                             .foregroundColor(.red)
                     }
-                    .opacity(taskModel.editTask == nil ? 0 : 1)
+//                    .opacity(taskModel.editTask == nil ? 0 : 1)
                 }
             
             VStack(alignment: .leading, spacing: 12) {

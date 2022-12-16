@@ -53,38 +53,38 @@ struct Home: View {
             }
         }
                 .padding()
-                .overlay(alignment: .bottom) {
-                    // MARK: Add Button
-                    Button {
-                        taskModel.openEditTask.toggle()
-                    } label: {
-                        Label {
-                            Text("Aufgabe hinzufügen")
-                                .font(.callout)
-                                .fontWeight(.semibold)
-                        } icon: {
-                            Image(systemName: "plus.app.fill")
-                        }
-                        .foregroundColor(Color(UIColor.systemBackground))
-                        .padding(.vertical,12)
-                        .padding(.horizontal)
-                        .background(colorScheme == .dark ? Color.white : Color.black,in: Capsule())
-                    }
-                    // MARK: Linear Gradient BG
-                    .padding(.top,10)
-                    .frame(maxWidth: .infinity)
-                    .background{
-                        Color(UIColor.systemBackground)
-//                        LinearGradient(stops: colorStops, startPoint: .top, endPoint: .bottom)
-                        .ignoresSafeArea()
-                    }
-                }
-                .fullScreenCover(isPresented: $taskModel.openEditTask) {
-                    taskModel.resetTaskData()
-                } content: {
-                    AddNewTask()
-                        .environmentObject(taskModel)
-                }
+//                .overlay(alignment: .bottom) {
+//                    // MARK: Add Button
+//                    Button {
+//                        taskModel.openEditTask.toggle()
+//                    } label: {
+//                        Label {
+//                            Text("Aufgabe hinzufügen")
+//                                .font(.callout)
+//                                .fontWeight(.semibold)
+//                        } icon: {
+//                            Image(systemName: "plus.app.fill")
+//                        }
+//                        .foregroundColor(Color(UIColor.systemBackground))
+//                        .padding(.vertical,12)
+//                        .padding(.horizontal)
+//                        .background(colorScheme == .dark ? Color.white : Color.black,in: Capsule())
+//                    }
+//                    // MARK: Linear Gradient BG
+//                    .padding(.top,10)
+//                    .frame(maxWidth: .infinity)
+//                    .background{
+//                        Color(UIColor.systemBackground)
+////                        LinearGradient(stops: colorStops, startPoint: .top, endPoint: .bottom)
+//                        .ignoresSafeArea()
+//                    }
+//                }
+//                .fullScreenCover(isPresented: $taskModel.openEditTask) {
+//                    taskModel.resetTaskData()
+//                } content: {
+//                    AddNewTask()
+//                        .environmentObject(taskModel)
+//                }
                 .sheet(isPresented: $isOnboarding) {
                     OnboardingView()
                 }
