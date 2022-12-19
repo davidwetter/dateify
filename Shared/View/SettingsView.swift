@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import StoreKit
 
 struct SettingsView: View {
     // MARK: - PROPERTIES
@@ -14,6 +15,8 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
     @AppStorage("isOnboarding") var isOnboarding: Bool = false
     @State private var confirmationDialog = false
+    @StateObject var storeManager: StoreManager
+
     
     // MARK: - BODY
     
@@ -89,11 +92,13 @@ struct SettingsView: View {
                             .frame(maxWidth: .infinity)
                     }
                     .confirmationDialog("Entwickler Unterstützen", isPresented: $confirmationDialog) {
-                        Button("CHF 1.--") { print("Support 1 Franken")}
-                        Button("CHF 3.--") { print("Support 3 Franken") }
-                        Button("CHF 5.--") { print("Support 5 Franken") }
-                        Button("Abbrechen", role: .cancel) { }
-                    } message: {
+                        List(storeManager.myProducts, id: \.self) { product in
+                            Button("CHF 1.--") { storeManager.purchaseProduct(product: product) }
+                            Button("CHF 3.--") { storeManager.purchaseProduct(product: product) }
+                            Button("CHF 5.--") { storeManager.purchaseProduct(product: product) }
+                            Button("Abbrechen", role: .cancel) { }
+                        }
+                    }message: {
                         Text("Entwickler Unterstützen")
                     }
                     

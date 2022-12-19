@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
-
+import StoreKit
 struct ContentView: View {
     
     @State private var isShowingAddNewTask: Bool = false
+    @StateObject var storeManager = StoreManager()
+
+    let productIDs = [
+            //Use your product IDs instead
+            "ch.davidwetter.taskios.store.chf1",
+            "ch.davidwetter.taskios.store.chf3",
+            "ch.davidwetter.taskios.store.chf5"
+        ]
     
     var body: some View {
         TabView {
@@ -46,8 +54,12 @@ struct ContentView: View {
             }
             
             
-                SettingsView()
+                SettingsView(storeManager: storeManager)
                     .navigationBarTitle("Kalender")
+                    .onAppear(perform: {
+                                       SKPaymentQueue.default().add(storeManager)
+                                       storeManager.getProducts(productIDs: productIDs)
+                                   })
             .tabItem { //note how this is modifying `NavigationView`
                 Image(systemName: "gear")
                 Text("Einstellungen")

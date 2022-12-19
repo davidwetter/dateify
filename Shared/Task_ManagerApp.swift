@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import StoreKit
 
 @main
 struct Task_ManagerApp: App {
     let persistenceController = PersistenceController.shared
     @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    @StateObject var storeManager = StoreManager()
     var body: some Scene {
         WindowGroup {
             if isOnboarding {
@@ -22,6 +24,7 @@ struct Task_ManagerApp: App {
             else {
                 ContentView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    
             }
         }
     }
