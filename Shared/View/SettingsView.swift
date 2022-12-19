@@ -92,21 +92,21 @@ struct SettingsView: View {
                             .frame(maxWidth: .infinity)
                     }
                     .confirmationDialog("Entwickler Unterstützen", isPresented: $confirmationDialog) {
-                        List(storeManager.myProducts, id: \.self) { product in
-                            Button("CHF 1.--") { storeManager.purchaseProduct(product: product) }
-                            Button("CHF 3.--") { storeManager.purchaseProduct(product: product) }
-                            Button("CHF 5.--") { storeManager.purchaseProduct(product: product) }
-                            Button("Abbrechen", role: .cancel) { }
-                        }
-                    }message: {
-                        Text("Entwickler Unterstützen")
-                    }
+                        Button("CHF 1.--") { print("Hello") }
+                        Button("CHF 3.--") { print(storeManager.purchaseProduct) }
+                        Button("CHF 5.--") { print(storeManager.purchaseProduct) }
+                        Button("Abbrechen", role: .cancel) {}
                     
-                    .padding()
-                    .background(
-                        Color(UIColor.tertiarySystemBackground)
-                            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-                    )
+                    }
+                message: {
+                    Text("Entwickler Unterstützen")
+                }
+                    
+                .padding()
+                .background(
+                    Color(UIColor.tertiarySystemBackground)
+                        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                )
                 }
                 
                 // MARK: - SECTION 3
